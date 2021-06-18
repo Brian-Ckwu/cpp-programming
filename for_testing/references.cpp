@@ -12,5 +12,10 @@ int main()
     i = 3;
     std::cout << "The value of i and j are " << i << " " << j << " respectively.\n";
 
+    int k = 4;
+    j = k; // This is not reassignment, the j still references to i, this line just change the value of variable i to 4
+
+    std::cout << "The value of i and j are " << i << " " << j << " respectively.\n";
+
     return 0;
 }

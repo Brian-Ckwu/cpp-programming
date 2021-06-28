@@ -36,4 +36,6 @@ int main() {
   my_birthday.d = 40;
 
   // that's when we want to use a class to control access
+  
+  return 0;
 }

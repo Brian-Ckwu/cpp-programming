@@ -37,5 +37,12 @@ int main() {
   init_day(another_day, -1, 3, 14);
   init_day(another_day, 2021, 6 ,28);
 
+  // However, sometimes the helper functions might be forgotten
+  // We can still do this:
+  Date yet_another_day;
+  yet_another_day.y = -100;
+  yet_another_day.d = 10;
+  yet_another_day.d += 1; // Forget to use add_day
+
   cout << another_day.y << endl;
 }

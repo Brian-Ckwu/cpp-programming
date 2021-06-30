@@ -2,7 +2,23 @@
 
 using namespace std;
 
+void null_pointer() {
+  double* p1 = new double;
+  double* p2 = nullptr;
+
+  cout << p1 << endl;
+  cout << p2 << endl;
+}
+
+void deallocate_memory() {
+  int* ptr = new int[10000];
+  delete[] ptr;
+}
+
 int main() {
+  null_pointer();
+  deallocate_memory();
+
   double* ptr = new double[4]; // allocate sizeof(double) * 4 bytes on the free store (heap) & return the pointer to the first double
 
   // char* cptr = new double; // error: double* cannot be assigned to char*
@@ -24,7 +40,7 @@ int main() {
   a2 = 11;
   b1 = 11;
 
-  cout << *ptr << " " << ptr[2] << endl;
+  cout << *ptr << " " << ptr[2] << endl; // 11 15
 
   return 0;
 }
